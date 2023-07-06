@@ -6,7 +6,6 @@
 
 body {
     min-width: 500px;
-    background-color: lightcyan;
 }
 
 .header-row {
@@ -35,6 +34,7 @@ h1 {
 ul {
     list-style-type: none;
     padding: 0;
+    box-shadow: 0 0 20px 2px black;
 
 }
 
@@ -53,4 +53,8 @@ li {
 
 li:hover {
     background-color: rgba(189, 182, 182, 0.726);
+}
+
+.search-bar {
+    box-shadow: 0 0 10px black;
 }

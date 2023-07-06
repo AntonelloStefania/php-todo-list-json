@@ -38,7 +38,7 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <div class="input-group mb-2">
+                            <div class="input-group mb-2 search-bar">
                                 <input type="text" name="" placeholder="insert task" class="form-control" v-model="toDoItem" @keyup.enter="updateTodoList">
                                 <button class="btn btn-success btn-sm" @click="updateTodoList">add task</button>
                             </div>
