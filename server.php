@@ -13,6 +13,19 @@ if(isset($_POST['newTask'])){
     file_put_contents('data/to_do.json', json_encode($array));
 }
 
-header('Content-Type: application/json');
-echo json_encode($array);
+
+if(isset($_POST['delElem'])){
+    $index = $_POST['delElem'];
+    array_splice($array, $index, 1);
+    file_put_contents('data/to_do.json', json_encode($array));
+}
+
+
+ header('Content-Type: application/json');
+ echo json_encode($array);
+
+
+
+
+   
 ?>

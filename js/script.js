@@ -16,17 +16,20 @@ createApp({
     },
     methods: {
         updateTodoList() {
-            const newTask = {
-                toDo: this.toDoItem,
-                status: false,
-            };
+            if (this.toDoItem !== '') {
 
-            axios.post(this.apiUrl, { newTask }, {
-                headers: { 'Content-Type': 'multipart/form-data' },
-            }).then((response) => {
-                this.toDoItem = '';
-                this.toDoList = response.data;
-            });
+                const newTask = {
+                    toDo: this.toDoItem,
+                    status: false,
+                };
+
+                axios.post(this.apiUrl, { newTask }, {
+                    headers: { 'Content-Type': 'multipart/form-data' },
+                }).then((response) => {
+                    this.toDoItem = '';
+                    this.toDoList = response.data;
+                });
+            }
         },
 
         changeStatus(obj) {
@@ -34,7 +37,13 @@ createApp({
         },
 
         deleteTask(index) {
-            this.toDoList.splice(index, 1)
+            const deleteTask = new FormData()
+            deleteTask.append('delElem', index);
+            axios.post(this.apiUrl, deleteTask).then(result => {
+                this.toDoList = result.deleteTask;
+            })
+
         }
-    },
-}).mount('#app');
+    }
+},
+).mount('#app');

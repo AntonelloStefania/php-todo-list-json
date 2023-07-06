@@ -4,20 +4,53 @@
     box-sizing: border-box;
 }
 
-.wrapper-custom {
-    background-color: rgba(44, 43, 43, 0.555);
-    height: 100vh;
+body {
+    min-width: 500px;
+    background-color: lightcyan;
+}
+
+.header-row {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    color: white;
+
+}
+
+.container-title {
     width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    background-color: rgb(59, 57, 57);
+    margin-bottom: 5rem;
+    min-width: 500px;
+}
+
+
+h1 {
+    font-weight: bolder;
 }
 
 ul {
     list-style-type: none;
+    padding: 0;
+
 }
 
 .text-delete {
     text-decoration: line-through;
     color: red
+}
+
+.task {
+    cursor: pointer;
+}
+
+li {
+    padding: 0.8rem;
+}
+
+li:hover {
+    background-color: rgba(189, 182, 182, 0.726);
 }
