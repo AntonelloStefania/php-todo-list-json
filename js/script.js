@@ -4,7 +4,7 @@ createApp({
     data() {
         return {
             apiUrl: 'server.php',
-            toDoList: null,
+            toDoList: [],
             toDoItem: '',
         };
     },
@@ -31,6 +31,10 @@ createApp({
 
         changeStatus(obj) {
             obj.status = !obj.status;
+        },
+
+        deleteTask(index) {
+            this.toDoList.splice(index, 1)
         }
     },
 }).mount('#app');

@@ -19,4 +19,5 @@ ul {
 
 .text-delete {
     text-decoration: line-through;
+    color: red
 }

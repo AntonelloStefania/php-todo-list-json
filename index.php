@@ -17,8 +17,9 @@
                         <div class="col-12">
                             <ul class="card ">
                                 <li class="my-3" v-for="(obj,index) in toDoList" :key="obj">
-                                    <span :class="obj.status ? 'text-delete':''">{{obj.toDo}}</span>
+                                    <span :class="obj.status ? 'text-delete':'fw-bold'">{{obj.toDo}}</span>
                                     <button class="btn btn-primary btn-sm ms-5" @click="changeStatus(obj)">status</button>
+                                    <button class="btn btn-danger btn-sm ms-5" @click="deleteTask(index)">delete</button>
                                 </li>
                             </ul>
                         </div>
@@ -27,6 +28,7 @@
                         <div class="col-12">
                             <div class="input-group mb-2">
                                 <input type="text" name="" placeholder="insert task" class="form-control" v-model="toDoItem" @keyup.enter="updateTodoList">
+                                <button class="btn btn-success btn-sm" @click="updateTodoList">add</button>
                             </div>
                         </div>
                     </div>
