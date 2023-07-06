@@ -10,14 +10,24 @@
         <title>ToDoList</title>
     </head>
     <body>
-        <div class="wrapper">
+        <div class="wrapper-custom">
             <div id="app">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <ul>
-                                <li v-for="obj in toDoList" :key="obj">{{obj.toDo}}</li>
+                            <ul class="card ">
+                                <li class="" v-for="obj in toDoList" :key="obj">
+                                    <span>{{obj}}</span>
+                                    <span class="ms-3">{{obj.status ? 'done':'undone'}}</span>
+                                </li>
                             </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="input-group mb-2">
+                                <input type="text" name="" placeholder="insert task" class="form-control" v-model="toDoItem" @keyup.enter="updateTodoList">
+                            </div>
                         </div>
                     </div>
                 </div>

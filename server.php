@@ -1,4 +1,18 @@
 <?php
 $string = file_get_contents('data/to_do.json');
-echo $string
+
+$array = json_decode($string, true);
+var_dump($array);
+
+if(isset($_POST['newTask'])){
+    $newTask = [
+    'toDo' => $_POST['newTask']['toDo'],
+    'status'=> false,
+    ];
+    array_push($array, $newTask);
+    file_put_contents('data/to_do.json', json_encode($array));
+}
+
+header('Content-Type: application/json');
+echo json_encode($array['toDoList']);
 ?>
