@@ -30,12 +30,7 @@ createApp({
         },
 
         changeStatus(obj) {
-            obj.status = !obj.status; // Inverte lo stato dell'oggetto (da true a false o da false a true)
-            // Esegui una richiesta POST per aggiornare lo stato nel server
-            axios.post(this.apiUrl, { updatedTask: obj }).then(() => {
-                // Aggiorna solo lo stato locale dell'oggetto senza richiedere nuovamente la lista dei compiti dal server
-            });
-
+            obj.status = !obj.status;
         }
     },
 }).mount('#app');
