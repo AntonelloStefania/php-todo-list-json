@@ -16,7 +16,7 @@
                     <div class="row">
                         <div class="col-12">
                             <ul>
-                                <li>{{hello}}</li>
+                                <li v-for="obj in toDoList" :key="obj">{{obj.toDo}}</li>
                             </ul>
                         </div>
                     </div>
