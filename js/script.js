@@ -41,7 +41,12 @@ createApp({
             deleteTask.append('delElem', index);
             axios.post(this.apiUrl, deleteTask).then(result => {
                 this.toDoList = result.deleteTask;
+
             })
+            axios.get(this.apiUrl).then((response) => {
+                this.toDoList = response.data;
+                console.log(this.toDoList);
+            });
 
         }
     }
