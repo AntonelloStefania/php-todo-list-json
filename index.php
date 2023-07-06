@@ -38,9 +38,9 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <div class="input-group mb-2 search-bar">
+                            <div class="input-group mb-2 mt-3 search-bar">
                                 <input type="text" name="" placeholder="insert task" class="form-control" v-model="toDoItem" @keyup.enter="updateTodoList">
-                                <button class="btn btn-success btn-sm" @click="updateTodoList">add task</button>
+                                <button class="btn btn-success " @click="updateTodoList">add task</button>
                             </div>
                         </div>
                     </div>

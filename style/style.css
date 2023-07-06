@@ -6,13 +6,15 @@
 
 body {
     min-width: 500px;
+    background-color: rgb(59, 57, 57);
 }
 
 .header-row {
-    height: 50px;
+    height: 80px;
     display: flex;
     align-items: center;
     color: white;
+
 
 }
 
@@ -21,9 +23,10 @@ body {
     height: 100%;
     display: flex;
     justify-content: center;
-    background-color: rgb(59, 57, 57);
+    background-color: rgba(17, 17, 17, 0.589);
     margin-bottom: 5rem;
     min-width: 500px;
+    border-bottom: 0.275rem solid black
 }
 
 
@@ -40,7 +43,7 @@ ul {
 
 .text-delete {
     text-decoration: line-through;
-    color: red
+    color: rgb(102, 27, 14)
 }
 
 .task {
@@ -57,4 +60,5 @@ li:hover {
 
 .search-bar {
     box-shadow: 0 0 10px black;
+    border-radius: 0.6rem;
 }

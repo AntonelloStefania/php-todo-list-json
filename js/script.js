@@ -40,14 +40,8 @@ createApp({
             const deleteTask = new FormData()
             deleteTask.append('delElem', index);
             axios.post(this.apiUrl, deleteTask).then(result => {
-                this.toDoList = result.deleteTask;
-
+                this.toDoList = result.data;
             })
-            axios.get(this.apiUrl).then((response) => {
-                this.toDoList = response.data;
-                console.log(this.toDoList);
-            });
-
         }
     }
 },
