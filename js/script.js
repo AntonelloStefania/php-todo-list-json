@@ -4,7 +4,7 @@ createApp({
     data() {
         return {
             apiUrl: 'server.php',
-            toDoList: [],
+            toDoList: null,
             toDoItem: '',
 
         };

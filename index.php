@@ -17,7 +17,7 @@
                         <div class="col-12">
                             <ul class="card ">
                                 <li class="" v-for="obj in toDoList" :key="obj">
-                                    <span>{{obj}}</span>
+                                    <span>{{obj.toDo}}</span>
                                     <span class="ms-3">{{obj.status ? 'done':'undone'}}</span>
                                 </li>
                             </ul>

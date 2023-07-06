@@ -2,7 +2,7 @@
 $string = file_get_contents('data/to_do.json');
 
 $array = json_decode($string, true);
-var_dump($array);
+
 
 if(isset($_POST['newTask'])){
     $newTask = [
@@ -14,5 +14,5 @@ if(isset($_POST['newTask'])){
 }
 
 header('Content-Type: application/json');
-echo json_encode($array['toDoList']);
+echo json_encode($array);
 ?>
