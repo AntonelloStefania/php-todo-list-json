@@ -16,9 +16,9 @@
                     <div class="row">
                         <div class="col-12">
                             <ul class="card ">
-                                <li class="" v-for="obj in toDoList" :key="obj">
-                                    <span>{{obj.toDo}}</span>
-                                    <span class="ms-3">{{obj.status ? 'done':'undone'}}</span>
+                                <li class="my-3" v-for="(obj,index) in toDoList" :key="obj">
+                                    <span :class="obj.status ? 'text-delete':''">{{obj.toDo}}</span>
+                                    <button class="btn btn-primary btn-sm ms-5" @click="changeStatus(obj)">status</button>
                                 </li>
                             </ul>
                         </div>
